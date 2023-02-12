@@ -20,7 +20,7 @@ class CelulasController extends Controller
             'user_id'=>auth()->user()->id
         ]);
 
-        return redirect()->route('visitas_pendientes')->with('celula_creada','Se añadio la celula con exito');
+        return redirect()->route('celulas_evangelisticas')->with('celula_creada','Se añadio la celula con exito');
 
     }
 
@@ -30,13 +30,13 @@ class CelulasController extends Controller
             'ubicacion'=>'required',
         ]);
         $celula->update($request->all());
-        return redirect()->route('visitas_pendientes')->with('celula_creada','Se actualizo la celula con exito');
+        return redirect()->route('celulas_evangelisticas')->with('celula_creada','Se actualizo la celula con exito');
 
     }
 
     public function destroy(CelulasEvangelistica $celula)
     {
         $celula->delete();
-        return redirect()->route('visitas_pendientes')->with('celula_eliminada','Se elimino la celula con exito');
+        return redirect()->route('celulas_evangelisticas')->with('celula_eliminada','Se elimino la celula con exito');
     }
 }
