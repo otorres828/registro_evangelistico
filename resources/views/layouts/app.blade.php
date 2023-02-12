@@ -16,7 +16,8 @@
     {{-- DATATABLE --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{asset('build/assets/app.15168d25.css')}}">
+    <script src="{{asset('build/assets/app.ccec956a.js')}}" defer></script>
 
 
 </head>
