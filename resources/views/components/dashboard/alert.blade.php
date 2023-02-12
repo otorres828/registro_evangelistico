@@ -3,10 +3,16 @@
     x-show="show">
     <div class="bg-gray-50 w-full md:w-1/2 rounded-xl p-8">
         <div class="justify-center items-center">
-            <h3 class="text-3xl font-bold text-gray-800">{{ $titulo }}</h3><br>
-            <div class="mt-2 text-black">
+            <h3 class="text-3xl font-bold text-gray-800">{{ $titulo }}</h3>
+            <div class="mt-2 text-xl font-semibold text-black">
                 {{ $mensaje }}
             </div>
+            <figure>
+                <img class="w-64 mx-auto pt-3"
+                    src="{{asset('images/aprobado.png')}}"
+                    alt="">
+            </figure>
+           
         </div>
         <div class="flex justify-center">
             <button
