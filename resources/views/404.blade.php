@@ -6,7 +6,7 @@
                     <img src="{{ asset('images/404-illustration.svg') }}" width="176" height="176" alt="404 illustration" />
                 </div>
                 <div class="mb-6">Hmm...esta pagina no existe!</div>
-                <a href="/panel" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Regresar al panel</a>
+                <a href="{{route('visitas_pendientes')}}" class="btn bg-indigo-500 hover:bg-indigo-600 text-white">Regresar al panel</a>
             </div>
         </div>
     </div>
