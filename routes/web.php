@@ -13,4 +13,4 @@ Route::resource('celulas', CelulasController::class)->middleware('auth')->except
 Route::resource('visitas', VisitaController::class)->middleware('auth')->except('show','create')->names('visitas');
 
 
-require_once __DIR__ . '/fortify.php';
+// require_once __DIR__ . '/fortify.php';
