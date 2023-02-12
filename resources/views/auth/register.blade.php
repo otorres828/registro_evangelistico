@@ -6,22 +6,22 @@
         <div class="space-y-4">
             <div>
                 <x-jet-label for="name">{{ __('Nombre completo') }} <span class="text-rose-500">*</span></x-jet-label>
-                <x-jet-input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-input id="name" class="w-full"  type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div>
                 <x-jet-label for="email">{{ __('Correo electronico') }} <span class="text-rose-500">*</span></x-jet-label>
-                <x-jet-input id="email" type="email" name="email" :value="old('email')" required />
+                <x-jet-input id="email" class="w-full"  type="email" name="email" :value="old('email')" required />
             </div>
 
             <div>
                 <x-jet-label for="password" value="{{ __('Clave') }}" />
-                <x-jet-input id="password" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-input id="password" class="w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div>
                 <x-jet-label for="password_confirmation" value="{{ __('Confirmar clave') }}" />
-                <x-jet-input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-input id="password_confirmation" class="w-full"  type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
         </div>
         <div class=" mt-6">

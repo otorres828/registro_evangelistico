@@ -1,12 +1,11 @@
 @if ($errors->any())
     <div {{ $attributes }}>
-        <div class="px-4 py-2 rounded-sm text-sm bg-rose-100 border border-rose-200 text-rose-600">
-            <div class="font-medium">{{ __('Whoops! Parece que hay algunos errores.') }}</div>
-            <ul class="mt-1 list-disc list-inside text-sm">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>         
+        <div class="font-medium text-red-600">{{ __('Whoops! Parece que ocurrio un error.') }}</div>
+
+        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
     </div>
 @endif

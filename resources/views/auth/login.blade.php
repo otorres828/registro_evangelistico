@@ -11,11 +11,11 @@
         <div class="space-y-4">
             <div>
                 <x-jet-label for="email" value="{{ __('Correo') }}" />
-                <x-jet-input id="email" type="email" name="email" :value="old('email')" required autofocus />                
+                <x-jet-input id="email" type="email" class="w-full"  name="email" :value="old('email')" required autofocus />                
             </div>
             <div>
                 <x-jet-label for="password" value="{{ __('Clave') }}" />
-                <x-jet-input id="password" type="password" name="password" required autocomplete="current-password" />                
+                <x-jet-input id="password" class="w-full" type="password" name="password" required autocomplete="current-password" />                
             </div>
         </div>
         <div class="flex items-center justify-between mt-6">
