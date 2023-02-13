@@ -31,7 +31,7 @@
                         @method('put')
                         <div class="my-2 text-xs text-center font-semibold text-slate-400 uppercase mb-2">Culminar Visita</div>
                         <p class="my-2 text-md text-black uppercase mb-2">Introduzca las observaciones o personas que asistieron a la visita</p>
-                        <textarea name="" class="h-50 w-full rounded-lg shadow-lg"></textarea>
+                        <textarea name="observaciones" class="h-50 w-full rounded-lg shadow-lg"></textarea>
                         <button class="actualizar disabled:opacity-40 mt-2 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Culminar Visita</button>
                     </form>
                 </div>
