@@ -45,8 +45,8 @@
 
     <!-- Content -->
     <div class="relative">
-        <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1">Hola, {{ Auth::user()->name }} 👋</h1>
+        <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1">{{ $titulo }} ⛪</h1> 
         <p>Hoy es un buen dia para hacer celula</p>
     </div>
-
+    
 </div>

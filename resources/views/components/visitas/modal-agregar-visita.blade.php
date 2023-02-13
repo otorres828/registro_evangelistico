@@ -5,7 +5,7 @@
         :class="{ 'bg-slate-200': searchOpen }"
         @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
         aria-controls="search-modal">
-        Agregar Celula
+        Agregar Visita
     </button>
     <!-- Modal backdrop -->
     <div class="fixed inset-0 bg-slate-900 bg-opacity-30 z-50 transition-opacity" x-show="searchOpen"
