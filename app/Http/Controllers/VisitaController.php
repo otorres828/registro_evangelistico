@@ -38,7 +38,6 @@ class VisitaController extends Controller
 
     public function finalizar(Visita $visita,Request $request){
         $request->validate(['observaciones'=>'required']);
-        return $visita;
         $visita->update(['observaciones'=>$request->observaciones,'estatus'=>2]);
         return redirect()->route('visitas_pendientes')->with('celula_creada','Se finalizo la visita con exito');
     }
