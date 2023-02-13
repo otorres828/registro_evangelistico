@@ -44,7 +44,7 @@
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca la el numero de telefono</div>
                         <input name="telefono" type="text"class="h-50 w-full rounded-lg shadow-lg" value="{{$celula->telefono}}"/>
                         
-                        <button type="submit" class="mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Modificar Celula</button>
+                        <button type="submit" class="actualizar disabled:opacity-40 mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Modificar Celula</button>
                     </form>
                 </div>
 

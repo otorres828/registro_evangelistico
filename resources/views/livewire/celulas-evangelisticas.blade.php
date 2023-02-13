@@ -24,6 +24,9 @@
                             <div class="font-semibold text-center">SE VISITO</div>
                         </th>
                         <th class="p-2">
+                            <div class="font-semibold text-center">PROXIMA VISITA</div>
+                        </th>
+                        <th class="p-2">
                             <div class="font-semibold text-center">ACCIONES</div>
                         </th>
                     </tr>
@@ -49,7 +52,18 @@
                                 <div class="text-center">{{$celula->nvisitas}}</div>
                             </td>
                             <td class="p-2">
-                                <div class="">
+                                <div class="text-center">@if ($celula->estatus)
+                                    <div class="bg-green-500 p-2 font-bold text-white rounded-full text-xs">
+                                        {{Carbon\Carbon::parse($celula->estatus)->format('m-d')}}
+                                    </div>
+                                @else
+                                <div class="bg-red-500 p-2 font-bold text-white rounded-full text-xs">
+                                    NO TIENE VISITA
+                                </div>
+                                @endif</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="text-center">
                                     <div class="relative inline-flex" x-data="{ open: false }">
                                         <button class="text-slate-400 hover:text-slate-500 rounded-full"
                                             :class="{ 'bg-slate-100 text-slate-500': open }" aria-haspopup="true"
@@ -75,9 +89,7 @@
                                                 </li>
                                               
                                                 <li>
-                                                    <x-modal-eliminarcelulaevangelistica :celula="$celula" />
-
-                                                
+                                                    <x-modal-eliminarcelulaevangelistica :celula="$celula" /> 
                                                 </li>
                                             </ul>
                                         </div>

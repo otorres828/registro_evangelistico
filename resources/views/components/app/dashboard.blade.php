@@ -1,5 +1,5 @@
 <div>
-    <x-dashboard.welcome-banner />
+    <x-dashboard.welcome-banner  :titulo="$titulo"/>
 
     @if (session('celula_creada'))
         <x-dashboard.alert titulo="Exito" :mensaje="session('celula_creada')" color="green" />

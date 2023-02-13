@@ -20,7 +20,7 @@ class VisitaFactory extends Factory
     public function definition()
     {
         return [
-            'obserbaciones'=>$this->faker->sentence(),
+            'observaciones'=>$this->faker->sentence(),
             'fecha'=>$this->faker->dateTime(),
             'estatus'=>$this->faker->randomElement([Visita::NOVISITADO,Visita::VISITADO]),
             'user_id'=>User::all()->random()->id,

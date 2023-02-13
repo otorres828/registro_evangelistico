@@ -26,7 +26,7 @@
             <div class="py-4 px-2">
 
                 <div class="px-2 mb-3 last:mb-0">
-                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Celula
+                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Visita
                     </div>
 
                     <form action="{{ route('visitas.store') }}" method="post">
@@ -46,8 +46,8 @@
                         <input name="fecha" type="datetime-local"class="h-50 w-full rounded-lg shadow-lg" />
 
                         <button type="submit"
-                            class="mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Agregar
-                            Celula</button>
+                            class="creando disabled:opacity-40 mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Agregar
+                            Visita</button>
                     </form>
                 </div>
 

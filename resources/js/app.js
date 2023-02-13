@@ -94,3 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
   dashboardCard09();
   dashboardCard11();
 });
+
+
+let actualizar = document.querySelector('.actualizar');
+actualizar.addEventListener('click',  (e)=> {
+    e.preventDefault();
+    actualizar.disabled = true;
+    actualizar.innerHTML = 'Actualizando...';
+    actualizar.form.submit();
+});
+
+let creando = document.querySelector('.creando');
+creando.addEventListener('click',  (e)=> {
+    e.preventDefault();
+    creando.disabled = true;
+    creando.innerHTML = 'Creando...';
+    creando.form.submit();
+});
+
+let eliminando = document.querySelector('.eliminando');
+eliminando.addEventListener('click',  (e)=> {
+    e.preventDefault();
+    eliminando.disabled = true;
+    eliminando.innerHTML = 'Eliminando...';
+    eliminando.form.submit();
+});
