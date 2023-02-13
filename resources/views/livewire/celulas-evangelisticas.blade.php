@@ -100,7 +100,9 @@
                     @endforeach
                 </tbody>
             </table>
-            {{$celulas->links()}}
+            <div class="pt-4 pb-2">
+                {{$celulas->links()}}
+            </div>
         </div>
     </div>
 </div>
