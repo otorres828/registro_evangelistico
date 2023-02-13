@@ -12,8 +12,7 @@
     @endif
 
     {{-- CELULAS OFICIALES --}}
-
-    <h1 class="text-xl font-semibold text-gray-500">Usted tiene {{ $co }} celulas oficiales</h1>
+    <h1 class="pb-2 text-xl font-semibold text-gray-500">Usted tiene {{ $co }} celulas oficiales</h1>
     @livewire('celulas-oficiales')
 
 </div>

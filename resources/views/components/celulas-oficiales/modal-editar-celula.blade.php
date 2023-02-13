@@ -77,8 +77,6 @@
                     <form action="{{ route('oficiales.update', $celula->id) }}" method="post">
                         @csrf
                         @method('put')
-               
-                        
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca la nueva ubicacion</div>
                         <textarea name="ubicacion" class="h-50 w-full rounded-lg shadow-lg">{{$celula->ubicacion}}</textarea>
                         
