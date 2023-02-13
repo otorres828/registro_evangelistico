@@ -4,8 +4,9 @@
         <x-jet-validation-errors class="mb-4" />
     </div>
     <header class="flex justify-between px-5 py-4 border-b border-slate-100">
-        <h2 class="font-semibold text-slate-800 uppercase">Visitas Pendientes</h2>
+        {{-- <h2 class="font-semibold text-slate-800 uppercase">Visitas Pendientes</h2> --}}
         <x-visitas.modal-agregar-visita :anfitriones="$anfitriones" />
+        <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 " placeholder="Buscar...">
     </header>
     <div class="px-3">
         <div class='p-3 overflow-auto h-auto'>
@@ -33,7 +34,7 @@
                             <td class="p-2">
                                 <div class="flex items-center">
 
-                                    <div class="text-slate-800">{{ $celula->celula->anfitrion }}</div>
+                                    <div class="text-slate-800">{{ $celula->anfitrion }}</div>
                                 </div>
                             </td>
                             <td class="p-2">

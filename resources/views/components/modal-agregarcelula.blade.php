@@ -2,7 +2,7 @@
 <div x-data="{ searchOpen: false }">
     <!-- Button -->
     <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 transition duration-150 rounded"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 transition duration-150 rounded"
         :class="{ 'bg-slate-200': searchOpen }"
         @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
         aria-controls="search-modal">

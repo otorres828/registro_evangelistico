@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class CelulasEvangelistica extends Model
 {
-    use HasFactory;
+    use HasFactory,Searchable;
 
     public $timestamps = false;
     protected $guarded = ['id'];
@@ -33,5 +34,14 @@ class CelulasEvangelistica extends Model
             foreach($this->visitas as $visita)
                 if($visita->estatus==1) return $visita->fecha;
         return false;
+    }
+
+    public function toSearchableArray()
+    {
+       return[
+            'anfitrion'=>$this->anfitrion,
+            'ubicacion'=>$this->ubicacion,
+            'telefono'=>$this->telefono
+       ];
     }
 }

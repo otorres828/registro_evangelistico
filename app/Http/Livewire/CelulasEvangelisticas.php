@@ -12,11 +12,12 @@ class CelulasEvangelisticas extends Component
 
 
     protected $paginationTheme = 'tailwind';
+    public $buscar=null;
 
     public function render()
     {
         
-        $celulas= CE::where('user_id',auth()->user()->id)->paginate(6);
+        $celulas= CE::search($this->buscar)->where('user_id',auth()->user()->id)->paginate(6);
 
         return view('livewire.celulas-evangelisticas',compact('celulas'));
     }

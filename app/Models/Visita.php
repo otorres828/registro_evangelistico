@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Visita extends Model
 {
-    use HasFactory;
+    use HasFactory,Searchable;
+  
     
     const NOVISITADO=1;
     const VISITADO=2;
@@ -21,5 +23,17 @@ class Visita extends Model
 
     public function celula(){
         return $this->belongsTo(CelulasEvangelistica::class);
+    }
+
+    public function getAnfitrionAttribute(){
+       
+        return $this->celula->anfitrion;
+    }
+
+    public function toSearchableArray()
+    {
+       return[
+            'celula_id'=>$this->celula(),
+       ];
     }
 }

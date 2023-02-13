@@ -11,10 +11,10 @@ class VisitasPendientes extends Component
 {   
     use WithPagination;
     protected $paginationTheme = 'tailwind';
-    
+    public $buscar=null;
     public function render()
     {
-        $celulas=Visita::where('estatus',1)->orderBy('fecha','asc')->paginate(6);
+        $celulas=Visita::search($this->buscar)->where('estatus',1)->orderBy('fecha','asc')->paginate(6);
         $anfitriones = CelulasEvangelistica::all();
         return view('livewire.visitas-pendientes',compact('celulas','anfitriones'));
     }
