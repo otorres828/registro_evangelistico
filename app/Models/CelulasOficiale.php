@@ -17,7 +17,8 @@ class CelulasOficiale extends Model
        return[
             'anfitrion'=>$this->anfitrion,
             'ubicacion'=>$this->ubicacion,
-            'telefono'=>$this->telefono
+            'telefono'=>$this->telefono,
+            'dia'=>$this->dia
        ];
     }
 }
