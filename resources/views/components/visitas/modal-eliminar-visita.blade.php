@@ -33,9 +33,6 @@
                     <p class="mx-7 text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Eliminar Visita
                     </p>
 
-                    <form action="{{ route('visitas.update', $celula) }}" method="post">
-                        @csrf
-                        @method('put')
                         <input type="hidden" name="user_id" class="h-50 w-full rounded-lg shadow-lg"
                             value="{{ Auth::user()->id }}" />
 
@@ -47,13 +44,12 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"
-                                    class="eliminando disabled:opacity-40 mr-2 mt-6  text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Eliminar</button>
+                                    class="eliminando disabled:opacity-40 mr-2 mt-6  text-center  bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Eliminar</button>
                             </form>
                             
                             <button @click.prevent="searchOpen = false" type="submit"
-                                class=" mt-6  text-center flex-1 bg-red-500 hover:bg-red-700 text-white hover:to-red-500 p-2 rounded">Cerrar</button>
+                                class=" mt-6  text-center  bg-red-500 hover:bg-red-700 text-white hover:to-red-500 p-2 rounded">Cerrar</button>
                         </div>
-                    </form>
                 </div>
 
             </div>

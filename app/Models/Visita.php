@@ -30,10 +30,4 @@ class Visita extends Model
         return $this->celula->anfitrion;
     }
 
-    public function toSearchableArray()
-    {
-       return[
-            'celula_id'=>$this->celula(),
-       ];
-    }
 }

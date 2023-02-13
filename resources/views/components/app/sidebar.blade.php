@@ -55,28 +55,6 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Paginas</span>
                 </h3>
                 <ul class="mt-3">
-                      {{-- CELULAS OFICIALES --}}
-                      <li
-                      class="px-3 py-2 rounded-sm mb-0.5 last:mb-0  @if (request()->routeIs('celulas_oficiales')) bg-slate-900 @endif ">
-                      <a href="{{ route('celulas_oficiales') }}"
-                          class="block text-slate-200 hover:text-white transition duration-150">
-                          <div class="flex items-center justify-between">
-                              <div class="flex items-center">
-                                  <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                                      <path class="fill-current text-slate-600"
-                                          d="M8.07 16H10V8H8.07a8 8 0 110 8z" />
-                                      <path class="fill-current text-slate-400" d="M15 12L8 6v5H0v2h8v5z" />
-                                  </svg>
-                                  <span
-                                      class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Celulas
-                                      Oficiales</span>
-                              </div>
-                              <!-- Icon -->
-
-                          </div>
-                      </a>
-
-                  </li>
                     {{-- VISITAS PENDIENTES --}}
                     <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0  @if (request()->routeIs('visitas_pendientes')) bg-slate-900 @endif">
@@ -105,9 +83,8 @@
 
                         </div>
                     </li>
-                   
-                    {{-- CELULAS EVENGELISTICAS --}}
-                    <li
+                        {{-- CELULAS EVENGELISTICAS --}}
+                        <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0  @if (request()->routeIs('celulas_evangelisticas')) bg-slate-900 @endif ">
                         <a href="{{ route('celulas_evangelisticas') }}"
                             class="block text-slate-200 hover:text-white transition duration-150">
@@ -127,8 +104,28 @@
                         </a>
 
                     </li>
-                  
+                    {{-- CELULAS OFICIALES --}}
+                    <li
+                        class="px-3 py-2 rounded-sm mb-0.5 last:mb-0  @if (request()->routeIs('celulas_oficiales')) bg-slate-900 @endif ">
+                        <a href="{{ route('celulas_oficiales') }}"
+                            class="block text-slate-200 hover:text-white transition duration-150">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                                        <path class="fill-current text-slate-600" d="M8.07 16H10V8H8.07a8 8 0 110 8z" />
+                                        <path class="fill-current text-slate-400" d="M15 12L8 6v5H0v2h8v5z" />
+                                    </svg>
+                                    <span
+                                        class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Celulas
+                                        Oficiales</span>
+                                </div>
+                                <!-- Icon -->
 
+                            </div>
+                        </a>
+
+                    </li>
+           
                 </ul>
 
                 </ul>

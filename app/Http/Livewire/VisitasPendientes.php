@@ -14,7 +14,7 @@ class VisitasPendientes extends Component
     public $buscar=null;
     public function render()
     {
-        $celulas=Visita::search($this->buscar)->where('estatus',1)->orderBy('fecha','asc')->paginate(6);
+        $celulas=Visita::where('estatus',1)->orderBy('fecha','asc')->paginate(7);
         $anfitriones = CelulasEvangelistica::all();
         return view('livewire.visitas-pendientes',compact('celulas','anfitriones'));
     }

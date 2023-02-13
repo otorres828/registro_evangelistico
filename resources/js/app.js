@@ -119,3 +119,11 @@ eliminando.addEventListener('click',  (e)=> {
     eliminando.innerHTML = 'Eliminando...';
     eliminando.form.submit();
 });
+
+let oficial = document.querySelector('.oficial');
+oficial.addEventListener('click',  (e)=> {
+    e.preventDefault();
+    oficial.disabled = true;
+    oficial.innerHTML = 'Eliminando...';
+    oficial.form.submit();
+});

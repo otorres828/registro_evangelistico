@@ -12,10 +12,8 @@
     @endif
 
     {{-- CELULAS OFICIALES --}}
-    @if ($co > 0)
-        <h1 class="text-xl font-semibold text-gray-500">Usted tiene {{ $co }} celulas oficiales</h1>
-        @livewire('celulas-oficiales')
-    @else
-        <h1 class="text-xl font-semibold text-gray-500">Usted es un discipulo</h1>
-    @endif
+
+    <h1 class="text-xl font-semibold text-gray-500">Usted tiene {{ $co }} celulas oficiales</h1>
+    @livewire('celulas-oficiales')
+
 </div>

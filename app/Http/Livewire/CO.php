@@ -2,9 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\CelulasEvangelistica;
 use App\Models\CelulasOficiale;
-use App\Models\Visita;
 use Livewire\Component;
 
 class CO extends Component

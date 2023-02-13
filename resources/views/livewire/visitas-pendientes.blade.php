@@ -6,29 +6,29 @@
     <header class="flex justify-between px-5 py-4 border-b border-slate-100">
         {{-- <h2 class="font-semibold text-slate-800 uppercase">Visitas Pendientes</h2> --}}
         <x-visitas.modal-agregar-visita :anfitriones="$anfitriones" />
-        <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 " placeholder="Buscar...">
+        {{-- <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 " placeholder="Buscar..."> --}}
+        <div class="px-4 pt-2">
+            {{$celulas->links()}}    
+        </div>
     </header>
     <div class="px-3">
+        @if ($celulas->count() > 0)
         <div class='p-3 overflow-auto h-auto'>
             <table class="w-full">
-                <!-- Table header -->
                 <thead class="text-xs uppercase text-slate-400 bg-slate-50 rounded-sm">
                     <tr>
                         <th class="p-2">
                             <div class="font-semibold text-left">ANFITRION</div>
                         </th>
                         <th class="p-2">
-                            <div class="font-semibold text-left">FECHA</div>
+                            <div class="font-semibold text-left">FECHA DE VISITA</div>
                         </th>
-                        
                         <th class="p-2">
                             <div class="font-semibold text-center">ACCIONES</div>
                         </th>
                     </tr>
                 </thead>
-                <!-- Table body -->
                 <tbody class="text-sm font-medium divide-y divide-slate-100 overflow-y-scroll h-32">
-                    <!-- Row -->
                     @foreach ($celulas as $celula)
                         <tr>
                             <td class="p-2">
@@ -38,7 +38,7 @@
                                 </div>
                             </td>
                             <td class="p-2">
-                                <div class="text-justify">{{ $celula->fecha }}</div>
+                                <div class="text-justify">{{ Carbon\Carbon::parse($celula->fecha)->format('d-M') }}</div>
                             </td>
                          
                             <td class="p-2 ">
@@ -53,9 +53,9 @@
                     @endforeach
                 </tbody>
             </table>
-            <div class="pt-4 pb-2">
-                {{$celulas->links()}}
-            </div>
         </div>
+        @else
+        <h1 class="text-gray-600 font-semibold text-xl text-center p-5">No se encontraron registros</h1>
+    @endif
     </div>
 </div>

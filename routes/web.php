@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CelulasController;
+use App\Http\Controllers\CelulasOficialesController;
 use App\Http\Controllers\VisitaController;
 use App\Http\Livewire\VP;
 use App\Http\Livewire\CE;
@@ -16,4 +17,5 @@ Route::resource('celulas', CelulasController::class)->middleware('auth')->except
 Route::get('visitas-pendientes', VP::class)->middleware('auth')->name('visitas_pendientes');
 Route::resource('visitas', VisitaController::class)->middleware('auth')->except('show','create','edit','show')->names('visitas');
 
+Route::resource('celulas/oficiales', CelulasOficialesController::class)->middleware('auth')->only('update','store','destroy')->names('oficiales');
 

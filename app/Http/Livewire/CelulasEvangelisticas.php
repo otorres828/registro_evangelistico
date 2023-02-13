@@ -9,8 +9,6 @@ use Livewire\WithPagination;
 class CelulasEvangelisticas extends Component
 {
     use WithPagination;
-
-
     protected $paginationTheme = 'tailwind';
     public $buscar=null;
 

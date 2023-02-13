@@ -30,26 +30,22 @@
                     <p class="mx-7 text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Eliminar Celula
                     </p>
 
-                    <form action="{{ route('celulas.update', $celula) }}" method="post">
-                        @csrf
-                        @method('put')
-                        <input type="hidden" name="user_id" class="h-50 w-full rounded-lg shadow-lg"
-                            value="{{ Auth::user()->id }}" />
+                    <input type="hidden" name="user_id" class="h-50 w-full rounded-lg shadow-lg"
+                        value="{{ Auth::user()->id }}" />
 
-                        <div class="my-2 text-xl text-center font-semibold  uppercase mb-2">¿Seguro que quieres eliminar
-                            esta celula evangelistica?</div>
+                    <div class="my-2 text-xl text-center font-semibold  uppercase mb-2">¿Seguro que quieres eliminar
+                        esta celula evangelistica?</div>
 
-                        <div class="flex justify-center px-14">
-                            <form class="destroy" action="{{ route('celulas.destroy', $celula) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit"
-                                    class="mr-2 mt-6  text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Eliminar</button>
-                            </form>
-                            <button @click.prevent="searchOpen = false" type="submit"
-                                class="mt-6  text-center flex-1 bg-red-500 hover:bg-red-700 text-white hover:to-red-500 p-2 rounded">Cerrar</button>
-                        </div>
-                    </form>
+                    <div class="flex justify-center px-14">
+                        <form class="destroy" action="{{ route('celulas.destroy', $celula) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="mr-2 mt-6  text-center  bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Eliminar</button>
+                        </form>
+                        <button @click.prevent="searchOpen = false" type="submit"
+                            class="mt-6  text-center  bg-red-500 hover:bg-red-700 text-white hover:to-red-500 p-2 rounded">Cerrar</button>
+                    </div>
                 </div>
 
             </div>
