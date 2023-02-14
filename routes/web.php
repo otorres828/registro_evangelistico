@@ -21,4 +21,4 @@ Route::resource('visitas', VisitaController::class)->middleware('auth')->except(
 Route::resource('celulas/oficiales', CelulasOficialesController::class)->middleware('auth')->only('update','store','destroy')->names('oficiales');
 Route::post('celulas/oficiales/convertir/{celula}', [CelulasOficialesController::class,'convertir'])->middleware('auth')->name('oficiales.convertir');
 
-Route::get('todas-las-visitas/{celula_id}',VisitasTodas::class)->middleware('auth')->name('todas_las_visitas');
+Route::get('todas-las-visitas/{celula_id}',VisitasTodas::class)->middleware('auth')->name('celulas_evangelisticas.visitas');

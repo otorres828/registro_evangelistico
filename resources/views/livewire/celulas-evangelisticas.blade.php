@@ -1,4 +1,4 @@
-<div class="col-span-full xl:col-span-12 bg-white shadow-lg rounded-sm border border-slate-200">
+<div class="col-span-full bg-white shadow-lg rounded-sm border border-slate-200">
     <x-jet-validation-errors class="mb-4" />
 
     <header class="flex justify-between items-start px-5 py-4 border-b border-slate-100">
@@ -54,7 +54,7 @@
                                     <div class="text-center text-emerald-500">{{ $celula->telefono }}</div>
                                 </td>
                                 <td class="p-2">
-                                    <a href="{{route('todas_las_visitas',$celula->id)}}" class="text-center">
+                                    <a href="{{route('celulas_evangelisticas.visitas',$celula->id)}}" class="text-center">
                                        {{ $celula->nvisitas }}
                                     </a>
                                 </td>
@@ -106,7 +106,7 @@
                                                         <x-celulas-evangelisticas.convertir :celula="$celula" />
                                                     </li>
                                                     <li>
-                                                        <a href="{{route('todas_las_visitas',$celula->id)}}"
+                                                        <a href="{{route('celulas_evangelisticas.visitas',$celula->id)}}"
                                                         class="cursor-pointer font-bold text-sm text-green-600 hover:text-green-800 flex py-1 px-3 hover:bg-gray-200">Ver Visitas</a>
                                                     </li>
                                                 </ul>
