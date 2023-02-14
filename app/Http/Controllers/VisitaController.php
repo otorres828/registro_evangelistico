@@ -12,6 +12,7 @@ class VisitaController extends Controller
     {
         $request->validate([
             'fecha'=>'required',
+            'anfitrion'=>'required',
         ]);
     
 
