@@ -37,6 +37,6 @@ class CelulasController extends Controller
     public function destroy(CelulasEvangelistica $celula)
     {
         $celula->delete();
-        return redirect()->route('celulas_evangelisticas')->with('celula_eliminada','Se elimino la celula con exito');
+        return redirect()->route('celulas_evangelisticas')->with('celula_creada','Se convirtio la celula evangelistica a celula oficial con exito');
     }
 }

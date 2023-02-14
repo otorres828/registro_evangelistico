@@ -18,4 +18,5 @@ Route::get('visitas-pendientes', VP::class)->middleware('auth')->name('visitas_p
 Route::resource('visitas', VisitaController::class)->middleware('auth')->except('show','create','edit','show')->names('visitas');
 
 Route::resource('celulas/oficiales', CelulasOficialesController::class)->middleware('auth')->only('update','store','destroy')->names('oficiales');
+Route::post('celulas/oficiales/convertir/{celula}', [CelulasOficialesController::class,'convertir'])->middleware('auth')->name('oficiales.convertir');
 

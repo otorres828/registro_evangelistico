@@ -20,11 +20,10 @@
         x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
         x-transition:leave="transition ease-in-out duration-200" x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 translate-y-4" x-cloak>
-        <div class="bg-white overflow-auto max-w-2xl w-full max-h-full rounded shadow-lg"
+        <div class="bg-white  max-w-2xl w-full max-h-full rounded shadow-lg"
             @click.outside="searchOpen = false" @keydown.escape.window="searchOpen = false">
             <!-- Search form -->
-
-            <div class="py-4 px-2">
+            <div class="py-4 px-2 text-left">
 
                 <!-- Recent searches -->
                 <div class="px-2 mb-3 last:mb-0">

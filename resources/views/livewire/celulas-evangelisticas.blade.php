@@ -2,7 +2,7 @@
     <x-jet-validation-errors class="mb-4" />
 
     <header class="flex justify-between items-start px-5 py-4 border-b border-slate-100">
-        <x-modal-agregarcelula />
+        <x-celulas-evangelisticas.agregar />
         <div>
             <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 "
                 placeholder="Buscar...">
@@ -93,11 +93,15 @@
                                                 x-transition:leave-end="opacity-0" x-cloak>
                                                 <ul>
                                                     <li>
-                                                        <x-modal-editarcelulaevangelistica :celula="$celula" />
+                                                        <x-celulas-evangelisticas.editar :celula="$celula" />
                                                     </li>
 
                                                     <li>
-                                                        <x-modal-eliminarcelulaevangelistica :celula="$celula" />
+                                                        <x-celulas-evangelisticas.eliminar :celula="$celula" />
+                                                    </li>
+                                                    <hr>
+                                                    <li>
+                                                        <x-celulas-evangelisticas.convertir :celula="$celula" />
                                                     </li>
                                                 </ul>
                                             </div>

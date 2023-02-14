@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CelulasEvangelistica;
 use App\Models\CelulasOficiale;
 use Illuminate\Http\Request;
 
@@ -48,4 +49,18 @@ class CelulasOficialesController extends Controller
         CelulasOficiale::destroy($id);
         return redirect()->route('celulas_oficiales')->with('celula_eliminada','Se elimino la celula con exito');
     }
+
+    public function convertir($id,Request $request){
+        $celula=CelulasEvangelistica::find($id);
+        CelulasOficiale::create([
+            'user_id'=>auth()->user()->id,
+            'ubicacion'=>$celula->ubicacion,
+            'dia'=>$request->dia,
+            'anfitrion'=>$celula->anfitrion,
+            'telefono'=>$celula->telefono
+        ]);
+        $celula->delete();
+        return redirect()->route('celulas_evangelisticas')->with('celula_eliminada','Se elimino la celula con exito');
+    }
+
 }
