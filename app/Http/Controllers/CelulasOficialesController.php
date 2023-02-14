@@ -60,7 +60,7 @@ class CelulasOficialesController extends Controller
             'telefono'=>$celula->telefono
         ]);
         $celula->delete();
-        return redirect()->route('celulas_evangelisticas')->with('celula_eliminada','Se elimino la celula con exito');
+        return redirect()->route('celulas_evangelisticas')->with('celula_eliminada','Se convirtio evangelistica a celula oficial con exito');
     }
 
 }
