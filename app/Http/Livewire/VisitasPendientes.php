@@ -12,6 +12,7 @@ class VisitasPendientes extends Component
     use WithPagination;
     protected $paginationTheme = 'tailwind';
     public $buscar=null;
+    
     public function render()
     {
         $celulas=Visita::where('estatus',1)->orderBy('fecha','asc')->paginate(7);
