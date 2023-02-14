@@ -54,7 +54,9 @@
                                     <div class="text-center text-emerald-500">{{ $celula->telefono }}</div>
                                 </td>
                                 <td class="p-2">
-                                    <div class="text-center">{{ $celula->nvisitas }}</div>
+                                    <a href="{{route('todas_las_visitas',$celula->id)}}" class="text-center">
+                                       {{ $celula->nvisitas }}
+                                    </a>
                                 </td>
                                 <td class="p-2">
                                     <div class="text-center">
