@@ -105,6 +105,10 @@
                                                     <li>
                                                         <x-celulas-evangelisticas.convertir :celula="$celula" />
                                                     </li>
+                                                    <li>
+                                                        <a href="{{route('todas_las_visitas',$celula->id)}}"
+                                                        class="cursor-pointer font-bold text-sm text-green-600 hover:text-green-800 flex py-1 px-3 hover:bg-gray-200">Ver Visitas</a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>

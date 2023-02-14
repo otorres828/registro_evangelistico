@@ -1,13 +1,12 @@
 @props(['celula'])
 <div x-data="{ searchOpen: false }">
     <!-- Button -->
-    <p
-        class=" cursor-pointer font-bold text-sm text-green-600 hover:text-green-800 flex py-1 px-3 hover:bg-gray-200"
+    <p class=" cursor-pointer font-bold text-sm text-green-600 hover:text-green-800 flex py-1 px-3 hover:bg-gray-200"
         :class="{ 'bg-slate-200': searchOpen }"
         @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
         aria-controls="search-modal">
-            Convertir
-</p>
+        Convertir
+    </p>
     <!-- Modal backdrop -->
     <div class="fixed inset-0 bg-slate-900 bg-opacity-30 z-50 transition-opacity" x-show="searchOpen"
         x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0"
@@ -28,13 +27,14 @@
 
                 <!-- Recent searches -->
                 <div class="px-2 mb-3 last:mb-0 text-left">
-                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Convertir a Celula Oficial</div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Convertir a Celula
+                        Oficial</div>
 
-                    <form action="{{route('oficiales.convertir',$celula)}}" method="post">
+                    <form action="{{ route('oficiales.convertir', $celula) }}" method="post">
                         @csrf
-                       
+
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Seleccione el dia de la celula</div>
-                        <select name="dia" class=" w-full rounded-lg shadow-lg" >
+                        <select name="dia" class=" w-full rounded-lg shadow-lg">
                             <div class="overflow-y-scroll">
                                 <option value="1">Lunes</option>
                                 <option value="2">Martes</option>
@@ -45,7 +45,9 @@
                                 <option value="7">Domingo</option>
                             </div>
                         </select>
-                        <button type="submit" class="actualizar disabled:opacity-40 mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Convertir a Celula Oficial</button>
+                        <button type="submit"
+                            class="actualizar disabled:opacity-40 mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Convertir
+                            a Celula Oficial</button>
                     </form>
                 </div>
 
