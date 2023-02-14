@@ -86,7 +86,7 @@
                         {{-- CELULAS EVENGELISTICAS --}}
                         <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0  @if (request()->routeIs('celulas_evangelisticas.*')) bg-slate-900 @endif ">
-                        <a href="{{ route('celulas_evangelisticas') }}"
+                        <a href="{{ route('celulas_evangelisticas.index') }}"
                             class="block text-slate-200 hover:text-white transition duration-150">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
