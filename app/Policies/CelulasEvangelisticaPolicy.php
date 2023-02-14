@@ -6,12 +6,14 @@ use App\Models\CelulasEvangelistica;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class VisitaPolicy
+class CelulasEvangelisticaPolicy
 {
     use HandlesAuthorization;
 
-
     public function publicado(?User $user, $id){
-        return true;
+        $celula=CelulasEvangelistica::where('id',$id)->where('user_id',$user->id)->first();
+        if($celula)
+            return true;
+        return false;
     }
 }
