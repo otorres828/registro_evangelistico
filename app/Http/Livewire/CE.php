@@ -12,8 +12,8 @@ class CE extends Component
     {
         $ce= CelulasEvangelistica::where('user_id',auth()->user()->id)->get();
 
-        $cv=Visita::where('estatus',2)->count();
-        $pv=Visita::where('estatus',1)->count();
+        $cv=Visita::where('user_id',auth()->user()->id)->where('estatus',2)->count();
+        $pv=Visita::where('user_id',auth()->user()->id)->where('estatus',1)->count();
 
         return view('livewire.ce',compact('cv','pv','ce'));
     }

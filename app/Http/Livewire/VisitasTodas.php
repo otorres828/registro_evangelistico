@@ -18,7 +18,7 @@ class VisitasTodas extends Component
 
         $this->celula_id=$celula_id;
         $this->cantidad= Visita::where('user_id',auth()->user()->id)->where('celula_id',$celula_id)->count();
-        $cel=CelulasEvangelistica::where('id',$celula_id)->first();
+        $cel=CelulasEvangelistica::where('user_id',auth()->user()->id)->where('id',$celula_id)->first();
         $this->anfitrion=$cel->anfitrion;
         $this->ubicacion=$cel->ubicacion;
     }
