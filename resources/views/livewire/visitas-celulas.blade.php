@@ -9,10 +9,7 @@
                         <th class="p-2">
                             <div class="font-semibold text-center">FECHA DE VISITA</div>
                         </th>
-                        <th class="p-2">
-                            <div class="font-semibold text-left">UBICACION</div>
-                        </th>
-                     
+       
                     
                         <th class="p-2">
                             <div class="font-semibold text-center">OBSERVACIONES</div>
@@ -25,13 +22,9 @@
                     @foreach ($visitas as $visita)
                         <tr>
                             <td class="p-2">
-                                <div class="text-justify text-gary-500 ">{{ $visita->fecha }}</div>
+                                <div class="text-center text-gary-500 ">{{  Carbon\Carbon::parse($visita->fecha)->format('d-M') }}</div>
                             </td>
-                            <td class="p-2 ">
-                                <div class="text-justify  text-gary-500 ">{{ $visita->ubicacion }}</div>
-                            </td>
-                     
-                            <td class="p-2">
+                            <td class="p-2" width="80%">
                                 <div class="text-justify  text-gary-500 ">{{ $visita->observaciones }}</div>
                             </td>
                         </tr>
