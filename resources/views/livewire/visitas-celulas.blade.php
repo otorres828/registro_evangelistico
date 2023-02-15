@@ -1,4 +1,4 @@
-<div class="col-span-full xl:col-span-12 bg-white shadow-lg rounded-sm border border-slate-200">
+<div class="col-span-full bg-white shadow-lg rounded-sm border border-slate-200">
     <div class="px-3">
         @if ($visitas->count() > 0)
             <div class='p-3 overflow-x-scroll'>
