@@ -61,7 +61,7 @@
                                 <td class="p-2">
                                     <div class="text-center">
                                         @if ($celula->estatus)
-                                            <div class="bg-green-500 p-1 font-bold text-white rounded-lg text-xs">
+                                            <div class="bg-green-500 p-2 font-bold text-white rounded-lg text-xs">
                                                 {{ Carbon\Carbon::parse($celula->estatus)->format('d-M') }} a las {{ Carbon\Carbon::parse($celula->estatus)->isoFormat('h:mm a') }}
                                             </div>
                                         @else
