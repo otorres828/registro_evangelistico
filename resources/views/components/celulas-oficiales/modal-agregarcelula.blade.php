@@ -2,11 +2,11 @@
 <div x-data="{ searchOpen: false }">
     <!-- Button -->
     <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 transition duration-150 rounded"
+        class="text-xs sm:text-sm mr-2 md:text-lg  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 transition duration-150 rounded"
         :class="{ 'bg-slate-200': searchOpen }"
         @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
         aria-controls="search-modal">
-            Agregar Celula
+        Agregar Celula
     </button>
     <!-- Modal backdrop -->
     <div class="fixed inset-0 bg-slate-900 bg-opacity-30 z-50 transition-opacity" x-show="searchOpen"
@@ -27,20 +27,22 @@
             <div class="py-4 px-2">
 
                 <div class="px-2 mb-3 last:mb-0">
-                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Celula</div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Celula
+                    </div>
 
-                    <form action="{{route('oficiales.store')}}" method="post">
+                    <form action="{{ route('oficiales.store') }}" method="post">
                         @csrf
 
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca el nombre del anfitrion</div>
                         <input type="text" name="anfitrion" class="h-50 w-full rounded-lg shadow-lg" />
-                        
+
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca la ubicacion</div>
                         <textarea name="ubicacion" class="h-50 w-full rounded-lg shadow-lg"></textarea>
-                        
-                        <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca la el numero de telefono</div>
+
+                        <div class="my-2 text-sm font-semibold  uppercase mb-2">Introduzca la el numero de telefono
+                        </div>
                         <input name="telefono" type="text"class="h-50 w-full rounded-lg shadow-lg" />
-                        
+
                         <div class="my-2 text-sm font-semibold  uppercase mb-2">Seleccione el dia</div>
                         <select name="dia" class=" w-full rounded-lg shadow-lg" value="1">
                             <div class="overflow-y-scroll">
@@ -53,7 +55,9 @@
                                 <option value="7">Domingo</option>
                             </div>
                         </select>
-                        <button type="submit" class="actualizar disabled:opacity-40  mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Agregar Celula</button>
+                        <button type="submit"
+                            class="actualizar disabled:opacity-40  mt-6 w-full text-center flex-1 bg-blue-500 hover:bg-blue-700 text-white hover:to-blue-500 p-2 rounded">Agregar
+                            Celula</button>
                     </form>
                 </div>
 
