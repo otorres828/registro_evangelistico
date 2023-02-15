@@ -62,7 +62,7 @@
                                     <div class="text-center">
                                         @if ($celula->estatus)
                                             <div class="bg-green-500 p-2 font-bold text-white rounded-full text-xs">
-                                                {{ Carbon\Carbon::parse($celula->estatus)->format('d-M') }}
+                                                {{ Carbon\Carbon::parse($celula->estatus)->format('d-M') }} a las {{ Carbon\Carbon::parse($celula->estatus)->toTimeString() }}
                                             </div>
                                         @else
                                             <div class="bg-red-500 p-2 font-bold text-white rounded-full text-xs">
