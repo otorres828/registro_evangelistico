@@ -4,7 +4,7 @@
     <header class="flex justify-between items-start px-5 py-4 border-b border-slate-100">
         <x-celulas-evangelisticas.agregar />
         <div>
-            <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 "
+            <input wire:model="buscar"type="text" class="p-2 bg-slate-50 text-gray-600 rounded-lg shadow me:xl-96 "
                 placeholder="Buscar...">
 
         </div>
@@ -58,11 +58,11 @@
                                        {{ $celula->nvisitas }}
                                     </a>
                                 </td>
-                                <td class="p-2">
+                                <td with="30px">
                                     <div class="text-center">
                                         @if ($celula->estatus)
-                                            <div class="bg-green-500 p-2 font-bold text-white rounded-full text-xs">
-                                                {{ Carbon\Carbon::parse($celula->estatus)->format('d-M') }}
+                                            <div class="bg-green-500 p-2 font-bold text-white rounded-lg text-xs">
+                                                <p>{{ Carbon\Carbon::parse($celula->estatus)->format('d-M') }}</p><p>{{ Carbon\Carbon::parse($celula->estatus)->isoFormat('h:mm a') }}</p>
                                             </div>
                                         @else
                                             <div class="bg-red-500 p-2 font-bold text-white rounded-full text-xs">

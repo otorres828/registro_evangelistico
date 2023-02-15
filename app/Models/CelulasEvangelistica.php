@@ -18,7 +18,7 @@ class CelulasEvangelistica extends Model
     }
 
     public function visitas(){
-        return $this->hasMany(visita::class,'celula_id');
+        return $this->hasMany(Visita::class,'celula_id');
     }
 
     public function getNvisitasAttribute(){
