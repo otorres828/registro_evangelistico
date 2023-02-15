@@ -58,7 +58,7 @@
                                        {{ $celula->nvisitas }}
                                     </a>
                                 </td>
-                                <td class="p-2">
+                                <td with="30px">
                                     <div class="text-center">
                                         @if ($celula->estatus)
                                             <div class="bg-green-500 p-2 font-bold text-white rounded-lg text-xs">
