@@ -39,7 +39,9 @@
                             </td>
                             <td class="p-2">
                                 <div class="text-justify">{{ Carbon\Carbon::parse($celula->fecha)->format('d-M') }}</div>
-                            </td>
+                                <p>{{ Carbon\Carbon::parse($celula->estatus)->isoFormat('h:mm a') }}</p>
+                                          
+ </td>
                          
                             <td class="p-2 ">
                                 <div class="flex justify-center">
