@@ -4,8 +4,10 @@
     <header class="flex justify-between items-start px-5 py-4 border-b border-slate-100">
         <x-celulas-oficiales.modal-agregarcelula />
         <div>
-            <input wire:model="buscar"type="text" class="p-3 sm:p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 "
-                placeholder="Buscar...">
+            <x-jet-input wire:model="buscar"  type="text" class="w-full"  placeholder="Buscar..." />                
+
+            {{-- <input wire:model="buscar"type="text" class="p-3 sm:p-2 bg-slate-50 text-gray-600 rounded-lg shadow xl:w-96 "
+                placeholder="Buscar..."> --}}
 
         </div>
     </header>
