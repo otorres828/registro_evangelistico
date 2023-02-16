@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CelulasController extends Controller
 {
+    public function Index(){
+        return redirect()->router('celulas_evangelisticas.index');
+    }
+
     public function store(Request $request){
         $request->validate([
             'anfitrion'=>'required',
