@@ -1,6 +1,6 @@
 <div class="col-span-full">
     @if ($celulas->count() > 0)
-        <h1 class="ml-1 pb-2 text-lg font-semibold text-gray-600">Usted tiene
+        <h1 class="ml-1 pb-2 text-lg font-semibold text-gray-600">hay
             {{ $cantidad_total-$cantidad_visitar }} celulas sin fecha para visitar</h1>
     @endif
     <div class="col-span-full bg-white shadow-lg rounded-sm border border-slate-200">
