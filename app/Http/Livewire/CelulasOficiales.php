@@ -14,7 +14,7 @@ class CelulasOficiales extends Component
     public function render()
     {
 
-        $celulas= CelulasOficiale::search($this->buscar)->where('user_id',auth()->user()->id)->orderBy('dia','asc')->paginate(7);
+        $celulas= CelulasOficiale::search($this->buscar)->where('user_id',auth()->user()->id)->orderBy('dia','asc')->paginate(10);
 
         return view('livewire.celulas-oficiales',compact('celulas'));
     }

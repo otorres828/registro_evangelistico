@@ -15,7 +15,7 @@ class CelulasEvangelisticas extends Component
     public function render()
     {
         
-        $celulas= CE::search($this->buscar)->where('user_id',auth()->user()->id)->paginate(6);
+        $celulas= CE::search($this->buscar)->where('user_id',auth()->user()->id)->paginate(10);
 
         return view('livewire.celulas-evangelisticas',compact('celulas'));
     }
