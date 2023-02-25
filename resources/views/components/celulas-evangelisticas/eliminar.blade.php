@@ -34,7 +34,7 @@
                         value="{{ Auth::user()->id }}" />
 
                     <div class="my-2 text-xl text-center font-semibold  uppercase mb-2">¿Seguro que quieres eliminar
-                        esta celula evangelistica?</div>
+                        esta puerta abierta?</div>
 
                     <div class="flex justify-center px-14">
                         <form class="destroy" action="{{ route('celulas.destroy', $celula) }}" method="POST">
