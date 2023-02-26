@@ -19,7 +19,7 @@ class Visitas extends Component
         $cv=Visita::where('user_id',auth()->user()->id)->where('estatus',2)->count();
         $pv=Visita::where('user_id',auth()->user()->id)->where('estatus',1)->count();
         $this->cantidad= Visita::where('user_id',auth()->user()->id)->where('estatus',2)->count();
-        $visitas=Visita::where('user_id',auth()->user()->id)->where('estatus',2)->paginate(10);
+        $visitas=Visita::where('user_id',auth()->user()->id)->where('estatus',2)->orderBy('fecha','desc')->paginate(10);
         return view('livewire.visitas',compact('visitas','pv','ce','cv'));
     }
 }
