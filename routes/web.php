@@ -6,6 +6,7 @@ use App\Http\Controllers\VisitaController;
 use App\Http\Livewire\VP;
 use App\Http\Livewire\CE;
 use App\Http\Livewire\CO;
+use App\Http\Livewire\Visitas;
 use App\Http\Livewire\VisitasTodas;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,7 @@ Route::get('celulas-oficiales', CO::class)->middleware('auth')->name('celulas_of
 Route::resource('celulas', CelulasController::class)->middleware('auth')->except('index','show','create','edit')->names('celulas');
 
 Route::get('visitas-pendientes', VP::class)->middleware('auth')->name('visitas_pendientes');
+Route::get('visitas-todas', Visitas::class)->middleware('auth')->name('visitas_todas');
 Route::resource('visitas', VisitaController::class)->middleware('auth')->except('show','create','edit','show')->names('visitas');
 
 Route::resource('celulas/oficiales', CelulasOficialesController::class)->middleware('auth')->only('update','store','destroy')->names('oficiales');

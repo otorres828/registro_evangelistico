@@ -54,4 +54,5 @@ class VisitaController extends Controller
         return redirect()->route('visitas_pendientes')->with('celula_creada',$mensaje);
     }
 
+
 }
