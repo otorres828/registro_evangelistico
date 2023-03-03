@@ -27,7 +27,7 @@
             <div class="py-4 px-2">
 
                 <div class="px-2 mb-3 last:mb-0">
-                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Puerta Abierta
+                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Celulas Evangelisticas
                     </div>
 
                     <form action="{{ route('oficiales.store') }}" method="post">

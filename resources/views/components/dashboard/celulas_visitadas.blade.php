@@ -11,7 +11,7 @@
                 <!-- Menu button -->
             </header>
             <div class="flex justify-between">
-                <h2 class="text-lg font-semibold text-slate-800 mb-2">Puertas Abiertas Visitadas</h2>
+                <h2 class="text-lg font-semibold text-slate-800 mb-2">Celulas Evangelisticas Visitadas</h2>
                 <h2 class="text-3xl font-bold text-slate-800">{{ $total }}</h2>
             </div>
         </div>

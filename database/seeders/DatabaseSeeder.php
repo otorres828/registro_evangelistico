@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
         CelulasEvangelistica::factory(15)->create();
-        Visita::factory(100)->create();
+        Visita::factory(20)->create();
 
     }
 }

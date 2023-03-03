@@ -6,7 +6,7 @@
         :class="{ 'bg-slate-200': searchOpen }"
         @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus()});"
         aria-controls="search-modal">
-            Agregar Puerta Abierta
+            Agregar Celulas Evangelisticas
     </button>
     <!-- Modal backdrop -->
     <div class="fixed inset-0 bg-slate-900 bg-opacity-30 z-50 transition-opacity" x-show="searchOpen"
@@ -27,7 +27,7 @@
             <div class="py-4 px-2">
 
                 <div class="px-2 mb-3 last:mb-0">
-                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Puerta Abierta</div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase px-2 my-3 text-center">Agregar Celulas Evangelisticas</div>
 
                     <form action="{{route('celulas.store')}}" method="post">
                         @csrf
